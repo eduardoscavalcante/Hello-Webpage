@@ -1,4 +1,3 @@
-/* Reset de CSS */
 * {
     margin: 0;
     padding: 0;
@@ -23,10 +22,23 @@ header {
     top: 0; /* Posiciona o cabeçalho no topo da página */
     left: 0;
     right: 0;
-    background-color: #003366;
+    background-color: #03223F;
     padding: 15px 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(3, 139, 187, 0.3) 0%, transparent 50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 header nav {
@@ -56,15 +68,16 @@ nav ul li a {
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
+    border-radius: 10px;
 }
 
 nav ul li a:hover {
-    background-color: #0059b3;
+    background-color: #007bb5;
     border-radius: 10px;
 }
 
 .simulate {
-    background-color: #00A4E4;
+    background-color: #038BBB;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
@@ -79,9 +92,9 @@ nav ul li a:hover {
 .banner {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 536px;
     overflow: hidden;
-    background: url('image 1.jpg') no-repeat;
+    background: url('img/image 1.jpg') no-repeat;
     background-size: cover;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
     /* Parallax effect */
@@ -103,7 +116,7 @@ nav ul li a:hover {
     width: 35%; /* Ocupa 40% da largura */
     height: 60%; /* Ocupa 40% da altura */
     background-color: rgba(3,34,63, 0.8); /* Semi-transparência preta */
-    border-top-right-radius: 15px; 
+    border-top-right-radius: 50px; 
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -134,7 +147,7 @@ nav ul li a:hover {
 .cta-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00A4E4;
+    background-color: #038BBB;
     font-family: 'Poppins', sans-serif;
     color: white;
     text-decoration: none;
@@ -226,7 +239,7 @@ nav ul li a:hover {
     margin-top: 10px;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: #00A4E4;
+    background-color: #038BBB;
     color: #fff;
     text-decoration: none;
     border-radius: 20px;
@@ -239,6 +252,10 @@ nav ul li a:hover {
 
 
 /* Rodapé */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
 .footer {
     background-color: #0b365b;
@@ -254,9 +271,9 @@ nav ul li a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(3, 139, 187, 0.8) 0%, transparent 80%);
     transform: translate(-50%, -50%);
     z-index: 1;
 }
@@ -289,8 +306,8 @@ nav ul li a:hover {
 
 .footer-section ul li {
     margin-bottom: 10px;
-    padding-left: 15px;
-    text-indent: -15px;
+    padding-left: 15px;  /* This adds the indent */
+    text-indent: -15px;  /* This keeps the text aligned after the bullet */
 }
 
 .footer-bottom {
