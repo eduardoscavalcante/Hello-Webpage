@@ -15,7 +15,7 @@
             <div class="logo">Hello</div>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="#services">Serviços</a></li>
                 <li><a href="#">Ajuda</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#" class="simulate">Simule agora</a></li>
@@ -35,10 +35,26 @@
     </div>    
 
     <!-- Seção de Serviços -->
-    <section class="services">
+    <section class="services" id="services">
         <h2>Nossos serviços</h2>
         <div class="cards">
             <!-- Os cartões serão inseridos aqui dinamicamente -->
+        </div>
+    </section>
+
+    <!-- Seção de Perguntas Frequentes -->
+    <section class="faq">
+        <div class="faq-banner">
+            <div class="faq-overlay">
+                <h2>Perguntas frequentes</h2>
+                <div class="faq-list" id="faq-list">
+                    <!-- As perguntas frequentes serão geradas aqui dinamicamente -->
+                </div>
+                <p id="duvidas">Ainda possui dúvidas?</p>
+                <div id="whatsapp-button-container">
+                    <a href="https://wa.me/5511999999999" id="whatsapp-button">Contate via Whatsapp</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -58,7 +74,7 @@
                 </p>
             </div>
             <div class="footer-section">
-                <h3>Nossos serviços</h3>
+                <h3><a href="#services">Nossos serviços</a></h3>
                 <ul>
                     <li>Serviço um</li>
                     <li>Serviço dois</li>
