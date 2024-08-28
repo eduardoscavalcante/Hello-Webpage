@@ -1,3 +1,4 @@
+/* Reset de CSS */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
 }
+
+p {
+    font-family: 'Roboto', sans-serif;
+  }
 
 body {
     font-family: Arial, sans-serif;
@@ -250,6 +255,103 @@ nav ul li a:hover {
     background-color: #007bb5;
 }
 
+/* Seção de Perguntas Frequentes */
+.faq h2{
+    text-align: center;
+}
+
+.faq-banner {
+    position: relative;
+    background: url('img/image\ 2.png') no-repeat;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px 50px;
+}
+
+.faq-banner #duvidas{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.faq-overlay {
+    background-color: rgba(3, 34, 63, 0.8);
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Ajuste na altura da lista de perguntas frequentes e adição de rolagem */
+.faq-list {
+    margin-top: 20px;
+    max-height: 200px; /* Define uma altura máxima para a lista */
+    overflow-y: auto; /* Adiciona a rolagem vertical */
+    padding-right: 10px; /* Espaço para o scrollbar */
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.arrow {
+    padding-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 100px;
+}
+
+.faq-item.open .arrow {
+    transform: rotate(90deg);
+}
+
+
+#whatsapp-button {
+    margin-bottom: 0px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #038BBB;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+}
+
+#whatsapp-button:hover {
+    background-color: #007bb5;
+}
 
 /* Rodapé */
 body {
